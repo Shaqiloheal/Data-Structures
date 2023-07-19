@@ -85,6 +85,65 @@ class HashTable:
         return all_keys
     
 
+    def item_in_common(list1,list2):
+        """
+        Check if the two input lists have at least one item in common using a naive approach.
+
+        This function works by iterating over each item in the first list, and for each item,
+        iterating over the second list to see if the item is present. As soon as it finds a match,
+        it returns True. If no common item is found after checking all items, it returns False.
+
+        This naive approach has a time complexity of O(n^2), where n is the length of the lists. 
+        This is because in the worst case it requires comparing each item of the first list with 
+        each item of the second list.
+
+        Parameters:
+        list1 (List): The first list to be compared.
+        list2 (List): The second list to be compared.
+
+        Returns:
+        bool: True if there is at least one common item between the two lists, False otherwise.
+    """
+        for i in list1:
+            for j in list2:
+                if i == j:
+                    return True
+        return False
+    
+    def item_in_common_efficent(list1,list2):
+        """
+        Check if the two input lists have at least one item in common using an efficient approach.
+
+        This function first creates a dictionary with the elements of the first list as keys.
+        Then, it iterates over the second list and checks if any element is present in the dictionary.
+
+        This efficient approach has a time complexity of O(n), where n is the length of the lists. 
+        This is because in the worst case it requires traversing each list once.
+
+        Parameters:
+        list1 (List): The first list to be compared.
+        list2 (List): The second list to be compared.
+
+        Returns:
+        bool: True if there is at least one common item between the two lists, False otherwise.
+        """
+
+        # Initialize an empty dictionary
+        my_dict = {}
+        # Iterate over each item in the first list
+        for i in list1:
+            # For each item, add it to the dictionary as a key with value True
+            my_dict[i] = True
+        # Iterate over each item in the second list
+        for j in list2:
+            # If the item is found as a key in the dictionary, return True
+            if j in my_dict:
+                return True
+        # If no common item is found after checking all items, return False
+        return False
+
+    
+
 # Create an instance of the HashTable class
 my_hash_table = HashTable()
 
@@ -107,3 +166,15 @@ print()
 
 # Get and print all keys currently in the hash table
 print(my_hash_table.keys())
+
+
+print()
+# Invoke the 'item_in_common' method on the HashTable class, passing two lists: [1,3,5] and [2,4,7].
+# This method checks if the two lists have any common items, and returns a Boolean value accordingly.
+# The result of this operation is then printed to the console.
+print(HashTable.item_in_common([1,3,5],[2,4,7])) # False
+print(HashTable.item_in_common([1,3,5],[2,4,5])) # True
+
+print()
+print(HashTable.item_in_common_efficent([1,3,5],[2,4,7])) # False
+print(HashTable.item_in_common_efficent([1,3,5],[2,4,5])) # True
