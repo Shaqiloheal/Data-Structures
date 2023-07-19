@@ -1,4 +1,4 @@
-# Repository Name: Data-Structures-in-Python
+# Data-Structures-in-Python
 
 This repository contains detailed, well-commented, and documented Python code for several fundamental data structures. We cover the basics of linked lists, binary trees, hash tables, and various algorithms to manipulate and interact with these data structures. 
 
