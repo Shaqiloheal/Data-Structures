@@ -19,7 +19,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 Distributed under the MIT License. See LICENSE for more information.
 
 # Contact
-Your Name - warren.spalding21@abdn.ac.uk
+Author - warren.spalding21@abdn.ac.uk
 
 Project Link: https://github.com/your_username/Data-Structures-in-Python
 
