@@ -21,6 +21,6 @@ Distributed under the MIT License. See LICENSE for more information.
 # Contact
 Author - warren.spalding21@abdn.ac.uk
 
-Project Link: https://github.com/your_username/Data-Structures-in-Python
+Project Link: https://github.com/shaqiloheal/Data-Structures-in-Python
 
 ## Note: This repository serves as a collection of the data structures learned, and anyone can explore the code without specific instructions.
